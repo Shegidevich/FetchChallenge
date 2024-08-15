@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Configuration>
+
+<Configuration strict="true" name="XMLConfigTest" status="WARN">
+	
+	<Appenders>
+		<Appender type="Console" name="Console">
+			<Layout type="PatternLayout" pattern="%d{HH:mm:ss} %m%n" />
+		</Appender>
+		<Appender type="File" name="File" fileName="target/logs/solution.log" append="false">
+			<Layout type="PatternLayout" pattern="%d{yyyy-MM-dd HH:mm:ss} %p %C{1.} %m%n" />
+		</Appender>
+	</Appenders>
+
+	<Loggers>
+		<Root level="info">
+			<AppenderRef ref="Console"/>
+			<AppenderRef ref="File"/>
+		</Root>
+	</Loggers>
+
+</Configuration>
